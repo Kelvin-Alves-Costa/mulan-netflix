@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    height: 100vh;
+    background: black url(../img/bg.jpg) no-repeat scroll;
+    background-size: cover;
+    color: white;
+}
+header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 100px;
+}
+header .logo img{
+    max-width: 150px;
+}
+.navigation{
+    display: flex;
+}
+.navigation li{
+    list-style: none;
+    margin: 0px 10px;
+}
+.navigation li > a{
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.navigation li > a:hover{
+    text-decoration: underline;
+    color: #DE0611;
+}
+.search{
+    position: relative;
+    width: 300px;
+    height: 40px;
+}
+.search input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    outline: none;
+    border-radius: 4px;
+    padding: 0px 10px 0px 45px;
+    backdrop-filter:blur(10px) ;
+    color: white;
+}
+.search input::placeholder{
+    color: #fff;
+}
+.search #lupa{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    color: white;
+    transform: translateY(-50%);
+    padding-right: 50px;
+}
+.content{
+    padding: 0px 100px;
+    padding-top: 1em;
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+}
+.content .movietitle{
+    max-width: 250px;
+}
+.content h4{
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 500;
+}
+.content h4 span{
+    padding: 0px 10px;
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+}
+.content h4 span:first-child{
+    padding-left: 0;
+}
+.content h4 span:last-child{
+    border-right: none;
+}
+#indicativeage{
+    display: inline-block;
+    color: white;
+    background-color: rgb(243, 169, 20);
+    padding: 0px 10px;
+    border-radius: 2px;
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+}
+.content p{
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 1.5em;
+    margin: 10px 0px 20px 0px;
+}
+.content .buttons{
+    position: relative;
+}
+.content .buttons a{
+    position: relative;
+    margin-right: 10px;
+    background-color: #b0050d;
+    padding: 6px 20px;
+    color: #FFF;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.content .buttons a:last-child{
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.content .buttons a:first-child:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+    border:1px solid white;
+}
+.content .buttons a:last-child:hover{
+    border:1px solid white;
+}
+
+.content #play,
+.content #save{
+    position: relative;
+    top: 5px;
+}
+
+@media screen  and (max-width:991px){
+    body{
+        background-position: center top;
+    }
+    header{
+        flex-direction: column;
+        gap: 15px;
+    }
+    .navigation{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 10px 0px;
+    }
+    .content{
+        max-width: 100%;
+    }
+    .buttons{
+        max-width: 100%;
+    }
+    .buttons a{
+        display: block;
+        max-width: 80%;
+    }
+}
+@media screen and(max-width:600px) {
+    body{
+        background-position: center top;
+    }
+    header{
+        flex-direction: column;
+        gap: 15px;
+    }
+    .navigation{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 10px 0px;
+    }
+    .search{
+        position: relative;
+        width: calc(100% - 20px);
+        height: 40px;
+    }
+    .content{
+        max-width: 100%;
+    }
+    .buttons{
+        max-width: 100%;
+    }
+    .buttons a{
+        display: block;
+        max-width: 80%;
+    }
+}
